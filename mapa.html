@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Google Maps</title>
+	<link rel="stylesheet" href="static/bootstrap/css/bootstrap.css">
+	<style>
+		#mapa
+		{
+			height: 50vh;
+			border: 1px solid #bbb;
+		}
+		#pano
+		{
+			height: 50vh;
+			border: 1px solid #bbb;
+		}
+	</style>
+</head>
+<body>
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-md-3 text-center">
+				<p class="mt-3" id="distancia">-</p>
+				<p class="mt-3">
+					<select id="cbo-tipoMapa" class="form-control">
+						<option value="roadmap">RoadMap</option>
+						<option value="satellite">Vista Satelital</option>
+						<option value="hybrid">Mapa Hibrido</option>
+						<option value="terrain">Mapa de terrenos</option>
+					</select>
+				</p>
+
+				<p class="mt-3">
+					<input id="txt-buscar" type="search" class="form-control" placeholder="Ingresa tu busqueda">
+				</p>
+
+				<h5>Coordenadas del Marker</h5>
+				<p>
+					<span id="Latitud">-</span>,
+					<span id="Longitud">-</span>
+				</p>
+				
+				<button class="btn btn-success" id="btn-crear">Fijar marcador aqui</button>
+
+				<h5 class="mt-5">Trazar Ruta</h5>
+				
+				<input value="37.7483821, -122.5033483" type="text" class="form-control mb-1" id="txt-desde" placeholder="Desde">
+				<input value="37.807569, -122.413257" vatype="text" class="form-control mb-2" id="txt-hasta" placeholder="Hasta">
+				<button class="btn btn-info btn-block" id="btn-ruta">Buscar Ruta</button>
+
+				<div id="info-rutas"></div>
+
+			</div>
+			<div class="col-md-9">
+				<div id = "mapa"></div>
+				<div id = "pano"></div>
+			</div>	
+		</div>
+	</div>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBb73zg-a7wSoO6WO7-RPmRMBm50t788yY&callback=init&libraries=drawing" async defer></script>
+<script src="static/js/jquery.min.js"></script>
+<script src="static/js/mapa.js"></script>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Introduccion a JavasScript</title>
+	<link rel="stylesheet" href="static/bootstrap/css/bootstrap.css">
+</head>
+<body>
+
+	<div class="container-fluid mt-3">
+		<h1>Calculo de cuota bancaria</h1>
+		<hr>
+		<div class="row h-100">
+			<div class="col-md-4">
+				<h3>Datos</h3>
+				<p>
+					<label for="txt-cliente">Cliente</label>
+					<input id="txt-cliente" type="text" class="form-control">
+				</p>
+
+				<p>
+					<label for="txt-monto">Monto del prestamo</label>
+					<input id="txt-monto" type="number" class="form-control">
+				</p>
+
+				<p>
+					<label for="txt-tasa">Tasa de interes</label>
+					<input id="txt-tasa" type="number" class="form-control">
+				</p>
+
+				<p>
+					<label for="txt-plazo">Plazo (años)</label>
+					<input id="txt-plazo" type="number" class="form-control">
+				</p>
+
+				<p>
+					<button id="btn-calcular" class="btn-success btn-block">Calcular cuota</button>
+				</p>
+
+			</div>
+			<div class="col-md-8">
+				<h3>Historial de calculos</h3>
+
+				<table class="table">
+					<thead>
+						<tr>
+							<th>Cliente</th>
+							<th>Monto</th>
+							<th>Tasa</th>
+							<th>Plazo</th>
+							<th>Cuota</th>
+							<th>Interes Total</th>
+							<th>Pago Total</th>
+						</tr>
+					</thead>
+					<tbody id="tdata"></tbody>
+				</table>
+			</div>
+		</div>
+
+	</div>
+
+	<script src="static/js/jquery.min.js"></script>
+	<script src="static/js/cuota.js"></script>
+	
+</body>
+</html>

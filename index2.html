@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Intro a jQuery</title>
+	<link rel="stylesheet" href="static/bootstrap/css/bootstrap.css">
+</head>
+<body>
+	<div class="container mt-5">
+		<button id="btn-mostrar1" class="btn btn-success">Mostrar</button>
+		<button id="btn-mostrar2" class="btn btn-danger">Mostrar (Fade)</button>
+		<button id="btn-mostrar3" class="btn btn-primary">Mostrar (Slide)</button>
+		<button id="btn-mostrar4" class="btn">Botoncito</button>
+
+		<div id="caja-mensaje" class="alert alert-danger mt-2" style="display:none">
+			ocurrio un error al actualizar los datos
+		</div>
+
+		<hr>
+
+		<button data-color="danger" class="btn btn-primary btn-saludar">Danger</button>
+		<button data-color="primary" class="btn btn-primary btn-saludar">Primary</button>
+		<button data-color="success" class="btn btn-primary btn-saludar">Success</button>
+		<button data-color="warning" class="btn btn-primary btn-saludar">Warning</button>
+		<button data-color="info" class="btn btn-primary btn-saludar">Info</button>
+		<hr>
+
+		<div id="caja-color">
+			ocurrio un error al actualizar los datos
+		</div>
+	</div>
+
+	<script src="static/js/jquery.min.js"></script>
+	<script src="static/js/app.js"></script>
+</body>
+</html>

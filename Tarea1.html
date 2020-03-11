@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Tarea#1</title>
+	<link rel="stylesheet" href="static/bootstrap/css/bootstrap.css">
+</head>
+<body>
+
+	<div class="container-fluid mt-3">
+		<h1>Factura</h1>
+		<hr>
+		<div class="row">
+			<div class="col-md-3">
+				<h3>Datos</h3>
+				<p>
+					<label for="txt-nombre">Nombre:</label>
+					<input id="txt-nombre" type="text" class="form-control">
+				</p>
+
+				<p>
+					<label for="txt-precio">Precio:</label>
+					<input id="txt-precio" type="number" class="form-control">
+				</p>
+
+				<p>
+					<label for="txt-cantidad">Cantidad:</label>
+					<input id="txt-cantidad" type="number" class="form-control">
+				</p>
+
+				<p>
+					<label for="chk-grabable">Grabable(Impuesto)</label>
+					<input id="chk-grabable" type="checkbox" class="form-control">
+				</p>
+
+				<p>
+					<button id="btn-calcular" class="btn-success btn-block">Facturar</button>
+				</p>
+
+			</div>
+			<div class="col-md-9">
+				<h3>Detalle De La Factura</h3>
+
+				<table class="table">
+					<thead>
+						<tr>
+							<th>Nombre</th>
+							<th>Precio</th>
+							<th>Cantidad</th>
+							<th>Grabable</th>
+							<th>SubTotal</th>
+						</tr>
+					</thead>
+					<tbody id="tdata"></tbody>
+				</table>
+				<div class="row ml-1 text-right ">
+					<div class="col-md">
+						
+					</div>
+					<div class="col-md">
+						
+					</div>
+					<div class="col-md">
+						<label><strong>SubTotal</strong></label><br>
+						<label id="lbl-subTotal">0</label>
+					</div>
+					<div class="col-md">
+						<label><strong>Impuesto</strong></label><br>
+						<label id="lbl-imp">0</label>
+					</div>
+					<div class="col-md">
+						<label><strong>Total a Pagar</strong></label><br>
+						<label id="lbl-total">0</label>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+
+	<script src="static/js/calculos.js"></script>
+	
+</body>
+</html>
